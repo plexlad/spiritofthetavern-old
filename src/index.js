@@ -33,7 +33,7 @@ for (const file of preconsFiles) {
 }
 
 client.once(Events.ClientReady, () => {
-	console.log('[BOT] Spirit is ready!');
+	console.log(`[BOT] Spirit is logged in as ${client.user.username}!`);
 });
 
 client.on(Events.InteractionCreate, async interaction => {

@@ -24,7 +24,7 @@ Programming Features:
 	* `times`: Sets of arrays with the assigned quite time values. In format [[starTime, endTime], ...]. Time segments can be unlimited.
 
 ## Getting Started (for developers)
-There are some features that make development very nice and extremely convenient. All modules in these folders are exported from the 
+There are some features that make development very nice and extremely convenient.
 
 ### Commands
 To add a new slash command, create a new javascript file in the commands folder. The name does not matter, but is defined with the `data` value.
@@ -32,3 +32,6 @@ To add a new slash command, create a new javascript file in the commands folder.
 The new command requires some values in `module.exports`:
  * `data`: A slash command builder that is used by the client.
  * `execute(interaction, client)`: A function that is called when the slash command is called. The client is the original used in your `index.js`, so it will keep all of the assigned variables.
+
+### Preconditions
+
