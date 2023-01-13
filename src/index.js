@@ -1,9 +1,13 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
-const { DISCORD_TOKEN } = require('./config.json');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+client.config = require('./config.json');
+const { DISCORD_TOKEN } = client.config;
+
+client.vars = {};
+client.functions
 
 // creates a commands Collection and does setup for the command loader
 client.commands = new Collection();
@@ -40,10 +44,14 @@ client.on(Events.InteractionCreate, async interaction => {
 	if (!command) return;  // checks if command exists
 
 	// checks through the preconditions
+	let commandPrecons = client.commands.get(interaction.commandName).preconditions;
 	let validPrecons = true;
-	for (const precon of client.commands.get(interaction.commandName).preconditions) {
-		if (!client.preconditions.get(precon).check(interaction)) {
-			validPrecons = false;
+
+	if (commandPrecons) {
+		for (const precon of client.commands.get(interaction.commandName).preconditions) {
+			if (!client.preconditions.get(precon).check(interaction, client)) {
+				validPrecons = false;
+			}
 		}
 	}
 	

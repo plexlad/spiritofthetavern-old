@@ -1,7 +1,11 @@
 {
-	"DISCORD_TOKEN": "OTcwMTk2Nzg1NTA1MTI0MzUy.Goulm_.dbrLNPURlnmV1HzyxOefqIuTUytiXC-BCFWrNk",
-	"roleIDs": {
+	"DISCORD_TOKEN": "OTcwMTk2Nzg1NTA1MTI0MzUy.GoVi--.V04p7Aloj7cpRZ_GvZUc9jWJ3lroA15qRvYkbI",
+	"roles": {
 		"mod": "1020537416395792404",
 		"admin": "1020537497916280922"
+	},
+	"quietTime": {
+		"channelExceptions": [],
+		"times": []
 	}
 }
