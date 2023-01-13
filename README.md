@@ -32,6 +32,10 @@ To add a new slash command, create a new javascript file in the commands folder.
 The new command requires some values in `module.exports`:
  * `data`: A slash command builder that is used by the client.
  * `execute(interaction, client)`: A function that is called when the slash command is called. The client is the original used in your `index.js`, so it will keep all of the assigned variables.
+ * `preconditions`: An array that is used for preconditions (check below). Not required.
 
 ### Preconditions
+Preconditions are used to add special filters to commands by using a function to take data from the client and interaction and returning `true` or `false`. To get started, create a new javascript file in the preconditions folder. The name on this one is important, as there is no `data` attribute. 
 
+The precondition requires a value in `module.exports`:
+ * `check(interaction, client)`: This is a function that runs when a precondition when called. Return `true` if you want the the command to go through, false if you want an error message.
