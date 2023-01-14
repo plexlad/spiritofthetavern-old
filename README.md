@@ -44,3 +44,4 @@ The precondition requires a value in `module.exports`:
 Scripts are your event handlers! There are not many functions right now, but more are to be added later! In order to start, create a new javascript file in the scripts folder. In `module.exports`, you can create any of the entries below. all are functions that are run during certain events.
 
  * `ready(client)`: Event "ready".
+ * `whenFalse(interaction, client)`: If the precondition returns false, this is the function that is run.
