@@ -9,8 +9,7 @@ module.exports = {
 
 		return false;
 	},
-
-	whenFalse: async function (interaction, client) {
-		interaction.reply({ content: "You do not have the role to use this command!", ephemeral: true });
+	whenFalse: async function(interaction, client) {
+		await interaction.reply({ content: "You do not have the role to use this command!", ephemeral: true });
 	}
 }
