@@ -39,3 +39,8 @@ Preconditions are used to add special filters to commands by using a function to
 
 The precondition requires a value in `module.exports`:
  * `check(interaction, client)`: This is a function that runs when a precondition when called. Return `true` if you want the the command to go through, false if you want an error message.
+
+### Scripts
+Scripts are your event handlers! There are not many functions right now, but more are to be added later! In order to start, create a new javascript file in the scripts folder. In `module.exports`, you can create any of the entries below. all are functions that are run during certain events.
+
+ * `ready(client)`: Event "ready".
